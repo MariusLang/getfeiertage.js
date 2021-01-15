@@ -1,0 +1,11 @@
+{
+  "name": "getfeiertag42",
+  "version": "0.0.1",
+  "main": "index.js",
+  "private": false,
+  "repository": {},
+  "license": "MIT",
+  "author": "Marius Lang <lang.marius@t-online.de>",
+  "keywords": [],
+  "dependencies": {}
+}
