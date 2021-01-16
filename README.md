@@ -27,9 +27,9 @@ var Feiertage = require('getfeiertage.js').Feiertage;
 
 ## Usage
 ### Date Format
-Format date|input|example
+Format Date|input|example
 ---|---|---
-German date|Feiertage.formatDE|1.1.2021
+German Date|Feiertage.formatDE|1.1.2021
 Date Object|Feiertage.formatDateObj|2021-1-1
 
 ### get Holidays
