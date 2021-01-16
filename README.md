@@ -27,208 +27,135 @@ var Feiertage = require('getfeiertage.js').Feiertage;
 
 ## Usage
 ### Date Format
-Format date|input
----|---
-German date|"DE"
-Date Object|"dateObj"
+Format Date|input|example
+---|---|---
+German Date|Feiertage.formatDE|1.1.2021
+Date Object|Feiertage.formatDateObj|2021-1-1
 
 ### get Holidays
-##### get New Year
 ```javascript
+var format = Feiertage.formatDateObj; // read table above
+
+// get New Year
 var neujahr = Feiertage.getNeujahr(format, year);
-```
 
-##### get Berchtoldstag
-```javascript
+// get Berchtoldstag
 var berchtoldstag = Feiertage.getBerchtoldstag(format, year);
-```
 
-##### get Epiphany
-```javascript
+// get Epiphany
 var epiphany = Feiertage.getHeiligeDreiKoenige(format, year);
-```
 
-##### get Weiberfastnacht
-```javascript
+// get Weiberfastnacht
 var weiberfastnacht = Feiertage.getWeiberfastnacht(format, year);
-```
 
-##### get Valentinstag
-```javascript
+// get Valentinstag
 var valentinstag = Feiertage.getValentinstag(format, year);
-```
 
-##### get Rosenmontag
-```javascript
-var rosenmontag = Feiertage.getRosenmontag(fomrat, year);
-```
+// get Rosenmontag
+var valentinstag = Feiertage.getValentinstag(format, year);
 
-##### get Fastnachtdienstg
-```javascript
+// get Fastnachtsdienstag
 var fastnachtsdienstag = Feiertage.getFastnachtsdienstag(format, year);
-```
 
-##### get Aschermittwoch
-```javascript
+// get Aschermittwoch
 var aschermittwoch = Feiertage.getAschermittwoch(fomrat, year);
-```
 
-##### get St. Josef
-```javascript
+// get St. Josef
 var stJosef = Feiertage.getStJosef(format, year);
-```
 
-##### get Gründonnerstag
-```javascript
+// get Gründonnerstag
 var gruendonnerstag = Feiertage.getGruendonnerstag(format, year);
-```
 
-##### get Karfreitag
-```javascript
+// get Karfreitag
 var karfreitag = Feiertag.getKarfreitag(format, year);
-```
 
-##### get Easter Sunday
-```javascript
+// get Easter Sunday
 var easterSunday = Feiertage.getOstersonntag(format, year);
-```
 
-##### get Easter Monday
-```javascript
+// get Easter Monday
 var easterMonday = Feiertage.getOstermontag(format, year);
-```
 
-##### get First May
-```javascript
+// get First May
 var firstMay = Feiertage.getFirstMay(format, year);
-```
 
-##### get St. Florian
-```javascript
+// get St. Florian
 var stFlorian = Feiertage.getStFlorian(format, year);
-```
 
-##### get Christi Himmelfahrt
-```javascript
+// get Christi Himmelfahrt
 var christiHimmelfahrt = Feiertage.getChristiHimmelfahrt(format, year);
-```
 
-##### get Pfingstsonntag
-```javascript
+// get Pfingstsonntag
 var pfingstsonntag = Feiertage.getPfingstsonntag(format, year);
-```
 
-##### get Pfingstmontag
-```javascript
+// get Pfingstmontag
 var pfingstmontag = Feiertage.getPfingstmontag(format, year);
-```
 
-##### get Fronleichnam
-```javascript
+// get Fronleichnam
 var fronleichnam = Feiertage.getFronleichnam(format, year);
-```
 
-##### get Bundesfeier CH
-```javascript
+// get Bundesfeier CH
 var bundesfeier = Feiertage.getBundesfeierCH(fomrat, year);
-```
 
-##### get Maria Himmelfahrt
-```javascript
+// get Maria Himmelfahrt
 var mariaHimmelfahrt = Feiertage.getMariaHimmelfahrt(format, year);
-```
 
-##### get St. Rupert
-```javascript
+// get Maria Himmelfahrt
+var mariaHimmelfahrt = Feiertage.getMariaHimmelfahrt(format, year);
+
+// get St. Rupert
 var stRupert = Feiertage.getStRupert(format, year);
-```
 
-##### get Tag der Deutschen Einheit
-```javascript
+// get Tag der Deutschen Einheit
 var tagDerDeutschenEinheit = Feiertage.getTagDerDeutschenEinheit(format, year);
-```
 
-##### get Tag der Volksabstimmung AT
-```javascript
+// get Tag der Volksabstimmung AT
 var tagDerVolksabstimmung = Feiertage.getTagDerVolksabstimmung(format, year);
-```
 
-##### get Nationalfeiertag AT
-```javascript
+// get Nationalfeiertag AT
 var nationalfeiertag = Feiertage.getNationalfeiertagAT(format, year);
-```
 
-##### get Halloween
-```javascript
+// get Halloween
 var halloween = Feiertage.getHalloween(format, year);
-```
 
-##### get Allerheiligen
-```javascript
+// get Allerheiligen
 var allerheiligen = Feiertage.getAllerheiligen(format, year);
-```
 
-##### get St. Martin
-```javascript
+// get St. Martin
 var stMartin = Feiertage.getStMartin(format, year);
-```
 
-##### get St. Leopold
-```javascript
+// get St. Leopold
 var stLeopold = Feiertage.getStLeopold(format, year);
-```
 
-##### get Buß und Bettag
-```javascript
+// get Buß und Bettag
 var bussUndBettag = Feiertage.getBussUndBettag(format, year);
-```
 
-##### get Santa Day
-```javascript
+// get Santa Day
 var santa = Feiertage.getNikolaus(format, year);
-```
 
-##### get Mariä Empfängnis
-```javascript
+// get Mariä Empfängnis
 var mariaeEmpfaengnis = Feiertage.getMariaeEmpfaengnis(format, year);
-```
 
-##### get 1. Advent
-```javascript
+// get 1. Advent
 var advent1 = Feiertage.getAdvent1(format, year);
-```
 
-##### get 2. Advent
-```javascript
+// get 2. Advent
 var advent2 = Feiertage.getAdvent2(format, year);
-```
 
-##### get 3. Advent
-```javascript
+// get 3. Advent
 var advent3 = Feiertage.getAdvent3(format, year);
-```
 
-##### get 4. Advent
-```javascript
+// get 4. Advent
 var advent4 = Feiertage.getAdvent4(format, year);
-```
 
-##### get Christmas Eve
-```javascript
+// get Christmas Eve
 var christmasEve = Feiertage.getHeiligabend(format, year);
-```
 
-##### get First day of Christmas
-```javascript
+// get First day of Christmas
 var firstDayOfChristmas = Feiertage.getWeihnachtsfeiertag1(format, year);
-```
 
-##### get Second day of Christmas
-```javascript
+// get Second day of Christmas
 var secondDayOfChristmas = Feiertage.getWeihnachtsfeiertag2(format, year);
-```
 
-##### get New Years Eve
-```javascript
+// get New Years Eve
 var newYearsEve = Feiertage.getSilvester(format, year);
 ```
