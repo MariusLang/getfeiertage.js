@@ -1,5 +1,8 @@
 var Feiertage = {};
 
+Feiertage.formatDateObj = "dateObj";
+Feiertage.formatDE = "DE";
+
 var Easter = require('./easter.js');
 var Advent = require('./advent.js');
 
@@ -55,7 +58,7 @@ Feiertage.getRosenmontag = function (format, year) {
 
     if (format == formatDE) {
         return refereceDate.getDate() + "." + (refereceDate.getMonth() + 1) + "." + year;
-    } else if (format = formatDateObj) {
+    } else if (format == formatDateObj) {
         return year + "-" + (refereceDate.getMonth() + 1) + "-" + refereceDate.getDate();
     }
 }

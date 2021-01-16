@@ -29,11 +29,13 @@ var Feiertage = require('getfeiertage.js').Feiertage;
 ### Date Format
 Format date|input|example
 ---|---|---
-German date|"DE"|1.1.2021
-Date Object|"dateObj"|2021-1-1
+German date|Feiertage.formatDE|1.1.2021
+Date Object|Feiertage.formatDateObj|2021-1-1
 
 ### get Holidays
 ```javascript
+var format = Feiertage.formatDateObj; // read table above
+
 // get New Year
 var neujahr = Feiertage.getNeujahr(format, year);
 
