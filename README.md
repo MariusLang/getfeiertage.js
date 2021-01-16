@@ -6,7 +6,7 @@
 
 [![NPM](https://nodei.co/npm/getfeiertage.js.png?compact=true)](https://nodei.co/npm/getfeiertage.js/)
 
-The **getfeiertage.js** npm package helps you to get german, austrian and swiss holidays into your project.
+The **getfeiertage.js** npm package helps you to get german, austrian and swiss holidays.
 
 ## Install
 ```
