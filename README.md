@@ -96,8 +96,8 @@ var fronleichnam = Feiertage.getFronleichnam(format, year);
 // get Bundesfeier CH
 var bundesfeier = Feiertage.getBundesfeierCH(fomrat, year);
 
-// get Maria Himmelfahrt
-var mariaHimmelfahrt = Feiertage.getMariaHimmelfahrt(format, year);
+// get Peter und Paul
+var peterUndPaul = Feiertage.getPeterUndPaul(format, year);
 
 // get Maria Himmelfahrt
 var mariaHimmelfahrt = Feiertage.getMariaHimmelfahrt(format, year);

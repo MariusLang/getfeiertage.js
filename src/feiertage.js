@@ -190,6 +190,14 @@ Feiertage.getFronleichnam = function (format, year) {
     }
 }
 
+Feiertage.getPeterUndPaul = function (format, year) {
+    if (format == formatDE) {
+        return "29.7." + year;
+    } else if (format == formatDateObj) {
+        return year + "-7-29";
+    }
+}
+
 Feiertage.getBundesfeierCH = function(format, year) {
     if (format == formatDE) {
         return "1.8." + year;
