@@ -14,10 +14,10 @@ npm install getfeiertage.js
 ```
 
 ## Getting started
-Into your package.json (the newest version is V1.0.0):
+Into your package.json (the newest version is V1.1.0):
 ```json
 "dependencies": {
-    "getfeiertage.js": "^1.0.0"
+    "getfeiertage.js": "^1.1.0"
 },
 ```
 Into your Javascript file:
@@ -93,11 +93,11 @@ var pfingstmontag = Feiertage.getPfingstmontag(format, year);
 // get Fronleichnam
 var fronleichnam = Feiertage.getFronleichnam(format, year);
 
-// get Bundesfeier CH
-var bundesfeier = Feiertage.getBundesfeierCH(fomrat, year);
-
 // get Peter und Paul
 var peterUndPaul = Feiertage.getPeterUndPaul(format, year);
+
+// get Bundesfeier CH
+var bundesfeier = Feiertage.getBundesfeierCH(fomrat, year);
 
 // get Maria Himmelfahrt
 var mariaHimmelfahrt = Feiertage.getMariaHimmelfahrt(format, year);
