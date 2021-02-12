@@ -14,10 +14,10 @@ npm install getfeiertage.js
 ```
 
 ## Getting started
-Into your package.json (the latest version is V1.1.1):
+Into your package.json (the latest version is V1.1.3):
 ```json
 "dependencies": {
-    "getfeiertage.js": "^1.1.1"
+    "getfeiertage.js": "^1.1.3"
 },
 ```
 Into your Javascript file:
