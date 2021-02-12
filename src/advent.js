@@ -1,24 +1,22 @@
-var Advent = {};
+const Advent = {};
 
-const formatDateObj = "dateObj";
-const formatDE = "DE";
+const formatDateObj = 'dateObj';
+const formatDE = 'DE';
 
-Advent.calcAdvent4 = function (format, day, year) {
-    // calculates days of advent
-    var checkDate = new Date(year + "-12-" + day); // generate object of specific day
-    var checkMonth = checkDate.getMonth() + 1; // month (should be 12)
-    var checkWeekday = checkDate.getDay(); // weekday
+// eslint-disable-next-line consistent-return
+Advent.calcAdvent4 = (format, day, year) => {
+  const checkDate = new Date(`${year}-12-${day}`);
+  const checkMonth = checkDate.getMonth() + 1;
+  const checkWeekday = checkDate.getDay();
 
-    // check generated weekday is 0 and generated month is 12
-    if (checkWeekday === 0 && checkMonth == 12) {
-        if (format == formatDE) {
-            return day + "." + checkMonth + "." + year;
-        } else if (format == formatDateObj) {
-            return year + "-" + checkMonth + "-" + day;
-        }
-    } else {
-        return Advent.calcAdvent4(format, day - 1, year);
+  if (checkWeekday === 0 && checkMonth === 12) {
+    if (format === formatDE) {
+      return `${day}.${checkMonth}.${year}`;
+    } if (format === formatDateObj) {
+      return `${day}.${checkMonth}.${year}`;
     }
-}
-
+  } else {
+    return Advent.calcAdvent4(format, day - 1, year);
+  }
+};
 module.exports = Advent;
