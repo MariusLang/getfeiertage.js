@@ -1,2 +1,3 @@
-Feiertage = require('./src/feiertage.js');
+const Feiertage = require('./src/feiertage.js');
+
 exports.Feiertage = Feiertage;
