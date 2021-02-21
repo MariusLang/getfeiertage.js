@@ -14,15 +14,9 @@ npm install getfeiertage.js
 ```
 
 ## Getting started
-Into your package.json (the latest version is V1.1.3):
-```json
-"dependencies": {
-    "getfeiertage.js": "^1.1.3"
-},
-```
 Into your Javascript file:
 ```javascript
-var Feiertage = require('getfeiertage.js').Feiertage;
+const Feiertage = require('getfeiertage.js').Feiertage;
 ```
 
 ## Usage
@@ -34,7 +28,7 @@ Date Object|Feiertage.formatDateObj|2021-1-1
 
 ### get Holidays
 ```javascript
-var format = Feiertage.formatDateObj; // read table above
+const format = Feiertage.formatDateObj; // read table above
 
 // get New Year
 var neujahr = Feiertage.getNeujahr(format, year);
