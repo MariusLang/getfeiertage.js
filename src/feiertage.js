@@ -257,7 +257,7 @@ Feiertage.getAllerheiligen = (format, year) => {
   if (format === formatDE) {
     return `1.11.${year}`;
   } if (format === formatDateObj) {
-    return `${year}-1-11`;
+    return `${year}-11-1`;
   }
 };
 
@@ -357,9 +357,9 @@ Feiertage.getWeihnachtsfeiertag1 = (format, year) => {
 
 Feiertage.getWeihnachtsfeiertag2 = (format, year) => {
   if (format === formatDE) {
-    return `25.12.${year}`;
+    return `26.12.${year}`;
   } if (format === formatDateObj) {
-    return `${year}-12-25`;
+    return `${year}-12-26`;
   }
 };
 
