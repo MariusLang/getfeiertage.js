@@ -13,7 +13,7 @@ Advent.calcAdvent4 = (format, day, year) => {
     if (format === formatDE) {
       return `${day}.${checkMonth}.${year}`;
     } if (format === formatDateObj) {
-      return `${day}.${checkMonth}.${year}`;
+      return `${year}-${checkMonth}-${day}`;
     }
   } else {
     return Advent.calcAdvent4(format, day - 1, year);
