@@ -1,4 +1,4 @@
-const Feiertage = require('../src/feiertage');
+import { Feiertage } from '../index';
 
 test('get Neujahr', () => {
   expect(Feiertage.getNeujahr(Feiertage.formatDateObj, 2021)).toBe('2021-1-1');
