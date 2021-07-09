@@ -1,9 +1,10 @@
+import GenerateDate from './generate-dateObj';
+
 const Easter = {};
 
 const formatDateObj = 'dateObj';
 const formatDE = 'DE';
 
-// eslint-disable-next-line consistent-return
 Easter.calcEasterSunday = (format, year) => {
   const a = year % 19; // currentYear mod 19
   const b = (19 * a + 24) % 30;
@@ -20,9 +21,16 @@ Easter.calcEasterSunday = (format, year) => {
   const easterDay = easterDate.getDate();
 
   if (format === formatDE) {
-    return `${easterDay}.${easterMonth}.${year}`;
+    return GenerateDate.generateDateStringDE(
+      year, easterMonth, easterDay,
+    );
   } if (format === formatDateObj) {
-    return `${year}-${easterMonth}-${easterDay}`;
+    return GenerateDate.generateDateObject(
+      year, easterMonth, easterDay,
+    );
   }
+  return GenerateDate.generateDateObject(
+    year, easterMonth, easterDay,
+  );
 };
 module.exports = Easter;
