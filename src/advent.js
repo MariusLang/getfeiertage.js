@@ -1,9 +1,10 @@
+import GenerateDate from './generate-dateObj';
+
 const Advent = {};
 
 const formatDateObj = 'dateObj';
 const formatDE = 'DE';
 
-// eslint-disable-next-line consistent-return
 Advent.calcAdvent4 = (format, day, year) => {
   const checkDate = new Date(`${year}-12-${day}`);
   const checkMonth = checkDate.getMonth() + 1;
@@ -11,12 +12,17 @@ Advent.calcAdvent4 = (format, day, year) => {
 
   if (checkWeekday === 0 && checkMonth === 12) {
     if (format === formatDE) {
-      return `${day}.${checkMonth}.${year}`;
+      return GenerateDate.generateDateStringDE(
+        year, checkMonth, day,
+      );
     } if (format === formatDateObj) {
-      return `${year}-${checkMonth}-${day}`;
+      return GenerateDate.generateDateObject(
+        year, checkMonth, day,
+      );
     }
-  } else {
+  } /* else {
     return Advent.calcAdvent4(format, day - 1, year);
-  }
+  } */
+  return Advent.calcAdvent4(format, day - 1, year);
 };
 module.exports = Advent;

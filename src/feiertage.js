@@ -1,3 +1,4 @@
+import GenerateDate from './generate-dateObj';
 import Easter from './easter';
 import Advent from './advent';
 
@@ -15,25 +16,25 @@ const formatDE = 'DE';
 
 Feiertage.getNeujahr = (format, year) => {
   if (format === formatDE) {
-    return `1.1.${year}`;
+    return GenerateDate.generateDateStringDE(year, 1, 1);
   } if (format === formatDateObj) {
-    return new Date(`${year}-01-01T00:00:00`);
+    return GenerateDate.generateDateObject(year, 1, 1);
   }
 };
 
 Feiertage.getBerchtoldstag = (format, year) => {
   if (format === formatDE) {
-    return `2.1.${year}`;
+    return GenerateDate.generateDateStringDE(year, 1, 2);
   } if (format === formatDateObj) {
-    return new Date(`${year}-01-02T00:00:00`);
+    return GenerateDate.generateDateObject(year, 1, 2);
   }
 };
 
 Feiertage.getHeiligeDreiKoenige = (format, year) => {
   if (format === formatDE) {
-    return `6.1.${year}`;
+    return GenerateDate.generateDateStringDE(year, 1, 6);
   } if (format === formatDateObj) {
-    return new Date(`${year}-01-06T00:00:00`);
+    return GenerateDate.generateDateObject(year, 1, 6);
   }
 };
 
@@ -41,28 +42,22 @@ Feiertage.getWeiberfastnacht = (format, year) => {
   const referenceDate = new Date(Feiertage.getOstersonntag(formatDateObj, year));
   referenceDate.setDate(referenceDate.getDate() - 52);
 
-  let referenceDay = (referenceDate.getDate()).toString();
-  if (referenceDay.length === 1) {
-    referenceDay = `0${referenceDay}`;
-  }
-
-  let referenceMonth = (referenceDate.getMonth() + 1).toString();
-  if (referenceMonth.length === 1) {
-    referenceMonth = `0${referenceMonth}`;
-  }
-
   if (format === formatDE) {
-    return `${referenceDay}.${referenceMonth}.${year}`;
+    return GenerateDate.generateDateStringDE(
+      year, referenceDate.getMonth() + 1, referenceDate.getDate(),
+    );
   } if (format === formatDateObj) {
-    return new Date(`${year}-${referenceMonth}-${referenceDay}`);
+    return GenerateDate.generateDateObject(
+      year, referenceDate.getMonth() + 1, referenceDate.getDate(),
+    );
   }
 };
 
 Feiertage.getValentinstag = (format, year) => {
   if (format === formatDE) {
-    return `14.2.${year}`;
+    return GenerateDate.generateDateStringDE(year, 2, 14);
   } if (format === formatDateObj) {
-    return new Date(`${year}-02-14`);
+    return GenerateDate.generateDateObject(year, 2, 14);
   }
 };
 
@@ -71,9 +66,13 @@ Feiertage.getRosenmontag = (format, year) => {
   referenceDate.setDate(referenceDate.getDate() - 48);
 
   if (format === formatDE) {
-    return `${referenceDate.getDate()}.${referenceDate.getMonth() + 1}.${year}`;
+    return GenerateDate.generateDateStringDE(
+      year, referenceDate.getMonth() + 1, referenceDate.getDate(),
+    );
   } if (format === formatDateObj) {
-    return new Date(`${year}-0${referenceDate.getMonth() + 1}-${referenceDate.getDate()}`);
+    return GenerateDate.generateDateObject(
+      year, referenceDate.getMonth() + 1, referenceDate.getDate(),
+    );
   }
 };
 
@@ -82,9 +81,13 @@ Feiertage.getFastnachtsdienstag = (format, year) => {
   referenceDate.setDate(referenceDate.getDate() - 47);
 
   if (format === formatDE) {
-    return `${referenceDate.getDate()}.${referenceDate.getMonth() + 1}.${year}`;
+    return GenerateDate.generateDateStringDE(
+      year, referenceDate.getMonth() + 1, referenceDate.getDate(),
+    );
   } if (format === formatDateObj) {
-    return new Date(`${year}-0${referenceDate.getMonth() + 1}-${referenceDate.getDate()}`);
+    return GenerateDate.generateDateObject(
+      year, referenceDate.getMonth() + 1, referenceDate.getDate(),
+    );
   }
 };
 
@@ -93,17 +96,21 @@ Feiertage.getAschermittwoch = (format, year) => {
   referenceDate.setDate(referenceDate.getDate() - 46);
 
   if (format === formatDE) {
-    return `${referenceDate.getDate()}.${referenceDate.getMonth() + 1}.${year}`;
+    return GenerateDate.generateDateStringDE(
+      year, referenceDate.getMonth() + 1, referenceDate.getDate(),
+    );
   } if (format === formatDateObj) {
-    return new Date(`${year}-0${referenceDate.getMonth() + 1}-${referenceDate.getDate()}`);
+    return GenerateDate.generateDateObject(
+      year, referenceDate.getMonth() + 1, referenceDate.getDate(),
+    );
   }
 };
 
 Feiertage.getStJosef = (format, year) => {
   if (format === formatDE) {
-    return `19.3.${year}`;
+    return GenerateDate.generateDateStringDE(year, 3, 19);
   } if (format === formatDateObj) {
-    return new Date(`${year}-03-19`);
+    return GenerateDate.generateDateObject(year, 3, 19);
   }
 };
 
@@ -112,9 +119,13 @@ Feiertage.getGruendonnerstag = (format, year) => {
   referenceDate.setDate(referenceDate.getDate() - 3);
 
   if (format === formatDE) {
-    return `${referenceDate.getDate()}.${referenceDate.getMonth() + 1}.${year}`;
+    return GenerateDate.generateDateStringDE(
+      year, referenceDate.getMonth() + 1, referenceDate.getDate(),
+    );
   } if (format === formatDateObj) {
-    return new Date(`${year}-0${referenceDate.getMonth() + 1}-${referenceDate.getDate()}`);
+    return GenerateDate.generateDateObject(
+      year, referenceDate.getMonth() + 1, referenceDate.getDate(),
+    );
   }
 };
 
@@ -122,20 +133,14 @@ Feiertage.getKarfreitag = (format, year) => {
   const referenceDate = new Date(Feiertage.getOstersonntag(formatDateObj, year));
   referenceDate.setDate(referenceDate.getDate() - 2);
 
-  let referenceMonth = referenceDate.getMonth() + 1;
-  if (referenceMonth.lengt === 0) {
-    referenceMonth = `0${referenceDate.getMonth() + 1}`;
-  }
-
-  let referenceDay = referenceDate.getDate();
-  if (referenceDay.lengt === 0) {
-    referenceDay = `0${referenceDate.getDate()}`;
-  }
-
   if (format === formatDE) {
-    return `${referenceDay}.${referenceMonth}.${year}`;
+    return GenerateDate.generateDateStringDE(
+      year, referenceDate.getMonth() + 1, referenceDate.getDate(),
+    );
   } if (format === formatDateObj) {
-    return new Date(`${year}-0${referenceMonth}-${referenceDay}`);
+    return GenerateDate.generateDateObject(
+      year, referenceDate.getMonth() + 1, referenceDate.getDate(),
+    );
   }
 };
 
@@ -146,25 +151,29 @@ Feiertage.getOstermontag = (format, year) => {
   referenceDate.setDate(referenceDate.getDate() + 1);
 
   if (format === formatDE) {
-    return `${referenceDate.getDate()}.${referenceDate.getMonth() + 1}.${year}`;
+    return GenerateDate.generateDateStringDE(
+      year, referenceDate.getMonth() + 1, referenceDate.getDate(),
+    );
   } if (format === formatDateObj) {
-    return `${year}-${referenceDate.getMonth() + 1}-${referenceDate.getDate()}`;
+    return GenerateDate.generateDateObject(
+      year, referenceDate.getMonth() + 1, referenceDate.getDate(),
+    );
   }
 };
 
 Feiertage.getFirstMay = (format, year) => {
   if (format === formatDE) {
-    return `1.5.${year}`;
+    return GenerateDate.generateDateStringDE(year, 5, 1);
   } if (format === formatDateObj) {
-    return `${year}-5-1`;
+    return GenerateDate.generateDateObject(year, 5, 1);
   }
 };
 
 Feiertage.getStFlorian = (format, year) => {
   if (format === formatDE) {
-    return `4.5.${year}`;
+    return GenerateDate.generateDateStringDE(year, 5, 4);
   } if (format === formatDateObj) {
-    return `${year}-5-4`;
+    return GenerateDate.generateDateObject(year, 5, 4);
   }
 };
 
@@ -173,9 +182,13 @@ Feiertage.getChristiHimmelfahrt = (format, year) => {
   referenceDate.setDate(referenceDate.getDate() + 39);
 
   if (format === formatDE) {
-    return `${referenceDate.getDate()}.${referenceDate.getMonth() + 1}.${year}`;
+    return GenerateDate.generateDateStringDE(
+      year, referenceDate.getMonth() + 1, referenceDate.getDate(),
+    );
   } if (format === formatDateObj) {
-    return `${year}-${referenceDate.getMonth() + 1}-${referenceDate.getDate()}`;
+    return GenerateDate.generateDateObject(
+      year, referenceDate.getMonth() + 1, referenceDate.getDate(),
+    );
   }
 };
 
@@ -184,9 +197,13 @@ Feiertage.getPfingstsonntag = (format, year) => {
   referenceDate.setDate(referenceDate.getDate() + 49);
 
   if (format === formatDE) {
-    return `${referenceDate.getDate()}.${referenceDate.getMonth() + 1}.${year}`;
+    return GenerateDate.generateDateStringDE(
+      year, referenceDate.getMonth() + 1, referenceDate.getDate(),
+    );
   } if (format === formatDateObj) {
-    return `${year}-${referenceDate.getMonth() + 1}-${referenceDate.getDate()}`;
+    return GenerateDate.generateDateObject(
+      year, referenceDate.getMonth() + 1, referenceDate.getDate(),
+    );
   }
 };
 
@@ -195,9 +212,13 @@ Feiertage.getPfingstmontag = (format, year) => {
   referenceDate.setDate(referenceDate.getDate() + 50);
 
   if (format === formatDE) {
-    return `${referenceDate.getDate()}.${referenceDate.getMonth() + 1}.${year}`;
+    return GenerateDate.generateDateStringDE(
+      year, referenceDate.getMonth() + 1, referenceDate.getDate(),
+    );
   } if (format === formatDateObj) {
-    return `${year}-${referenceDate.getMonth() + 1}-${referenceDate.getDate()}`;
+    return GenerateDate.generateDateObject(
+      year, referenceDate.getMonth() + 1, referenceDate.getDate(),
+    );
   }
 };
 
@@ -206,97 +227,101 @@ Feiertage.getFronleichnam = (format, year) => {
   referenceDate.setDate(referenceDate.getDate() + 60);
 
   if (format === formatDE) {
-    return `${referenceDate.getDate()}.${referenceDate.getMonth() + 1}.${year}`;
+    return GenerateDate.generateDateStringDE(
+      year, referenceDate.getMonth() + 1, referenceDate.getDate(),
+    );
   } if (format === formatDateObj) {
-    return `${year}-${referenceDate.getMonth() + 1}-${referenceDate.getDate()}`;
+    return GenerateDate.generateDateObject(
+      year, referenceDate.getMonth() + 1, referenceDate.getDate(),
+    );
   }
 };
 
 Feiertage.getPeterUndPaul = (format, year) => {
   if (format === formatDE) {
-    return `29.7.${year}`;
+    return GenerateDate.generateDateStringDE(year, 7, 29);
   } if (format === formatDateObj) {
-    return `${year}-7-29`;
+    return GenerateDate.generateDateObject(year, 7, 29);
   }
 };
 
 Feiertage.getBundesfeierCH = (format, year) => {
   if (format === formatDE) {
-    return `1.8.${year}`;
+    return GenerateDate.generateDateStringDE(year, 8, 1);
   } if (format === formatDateObj) {
-    return `${year}-8-1`;
+    return GenerateDate.generateDateObject(year, 8, 1);
   }
 };
 
 Feiertage.getMariaHimmelfahrt = (format, year) => {
   if (format === formatDE) {
-    return `15.8.${year}`;
+    return GenerateDate.generateDateStringDE(year, 8, 15);
   } if (format === formatDateObj) {
-    return `${year}-8-15`;
+    return GenerateDate.generateDateObject(year, 8, 15);
   }
 };
 
 Feiertage.getStRupert = (format, year) => {
   if (format === formatDE) {
-    return `24.9.${year}`;
+    return GenerateDate.generateDateStringDE(year, 9, 24);
   } if (format === formatDateObj) {
-    return `${year}-9-24`;
+    return GenerateDate.generateDateObject(year, 9, 24);
   }
 };
 
 Feiertage.getTagDerDeutschenEinheit = (format, year) => {
   if (format === formatDE) {
-    return `3.10.${year}`;
+    return GenerateDate.generateDateStringDE(year, 10, 3);
   } if (format === formatDateObj) {
-    return `${year}-10-3`;
+    return GenerateDate.generateDateObject(year, 10, 3);
   }
 };
 
 Feiertage.getTagDerVolksabstimmung = (format, year) => {
   if (format === formatDE) {
-    return `10.10.${year}`;
+    return GenerateDate.generateDateStringDE(year, 10, 10);
   } if (format === formatDateObj) {
-    return `${year}-10-10`;
+    return GenerateDate.generateDateObject(year, 10, 10);
   }
 };
 
 Feiertage.getNationalfeiertagAT = (format, year) => {
   if (format === formatDE) {
-    return `26.10.${year}`;
+    return GenerateDate.generateDateStringDE(year, 10, 26);
   } if (format === formatDateObj) {
-    return `${year}-10-26`;
+    return GenerateDate.generateDateObject(year, 10, 26);
   }
 };
 
 Feiertage.getHalloween = (format, year) => {
   if (format === formatDE) {
-    return `31.10.${year}`;
+    return GenerateDate.generateDateStringDE(year, 10, 31);
   } if (format === formatDateObj) {
-    return `${year}-10-31`;
+    return GenerateDate.generateDateObject(year, 10, 31);
   }
 };
 
 Feiertage.getAllerheiligen = (format, year) => {
   if (format === formatDE) {
-    return `1.11.${year}`;
+    return GenerateDate.generateDateStringDE(year, 11, 1);
   } if (format === formatDateObj) {
-    return `${year}-11-1`;
+    return GenerateDate.generateDateObject(year, 11, 1);
   }
 };
 
 Feiertage.getStMartin = (format, year) => {
   if (format === formatDE) {
-    return `11.11.${year}`;
+    return GenerateDate.generateDateStringDE(year, 11, 11);
   } if (format === formatDateObj) {
-    return `${year}-11-11`;
+    return GenerateDate.generateDateObject(year, 11, 11);
   }
 };
 
 Feiertage.getStLeopold = (format, year) => {
   if (format === formatDE) {
-    return `15.11.${year}`;
+    return GenerateDate.generateDateStringDE(year, 11, 15);
   } if (format === formatDateObj) {
-    return `${year}-11-15`;
+    return GenerateDate.generateDateObject(year, 11, 15);
   }
 };
 
@@ -305,25 +330,29 @@ Feiertage.getBussUndBettag = (format, year) => {
   referenceDate.setDate(referenceDate.getDate() - 32);
 
   if (format === formatDE) {
-    return `${referenceDate.getDate()}.${referenceDate.getMonth() + 1}.${year}`;
+    return GenerateDate.generateDateStringDE(
+      year, referenceDate.getMonth() + 1, referenceDate.getDate(),
+    );
   } if (format === formatDateObj) {
-    return `${year}-${referenceDate.getMonth() + 1}-${referenceDate.getDate()}`;
+    return GenerateDate.generateDateObject(
+      year, referenceDate.getMonth() + 1, referenceDate.getDate(),
+    );
   }
 };
 
 Feiertage.getNikolaus = (format, year) => {
   if (format === formatDE) {
-    return `6.12.${year}`;
+    return GenerateDate.generateDateStringDE(year, 12, 6);
   } if (format === formatDateObj) {
-    return `${year}-12-6`;
+    return GenerateDate.generateDateObject(year, 12, 6);
   }
 };
 
 Feiertage.getMariaeEmpfaengnis = (format, year) => {
   if (format === formatDE) {
-    return `8.12.${year}`;
+    return GenerateDate.generateDateStringDE(year, 12, 8);
   } if (format === formatDateObj) {
-    return `${year}-12-8`;
+    return GenerateDate.generateDateObject(year, 12, 8);
   }
 };
 
@@ -332,9 +361,13 @@ Feiertage.getAdvent1 = (format, year) => {
   referenceDate.setDate(referenceDate.getDate() - 21);
 
   if (format === formatDE) {
-    return `${referenceDate.getDate()}.${referenceDate.getMonth() + 1}.${year}`;
+    return GenerateDate.generateDateStringDE(
+      year, referenceDate.getMonth() + 1, referenceDate.getDate(),
+    );
   } if (format === formatDateObj) {
-    return `${year}-${referenceDate.getMonth() + 1}-${referenceDate.getDate()}`;
+    return GenerateDate.generateDateObject(
+      year, referenceDate.getMonth() + 1, referenceDate.getDate(),
+    );
   }
 };
 
@@ -343,9 +376,13 @@ Feiertage.getAdvent2 = (format, year) => {
   referenceDate.setDate(referenceDate.getDate() - 14);
 
   if (format === formatDE) {
-    return `${referenceDate.getDate()}.${referenceDate.getMonth() + 1}.${year}`;
+    return GenerateDate.generateDateStringDE(
+      year, referenceDate.getMonth() + 1, referenceDate.getDate(),
+    );
   } if (format === formatDateObj) {
-    return `${year}-${referenceDate.getMonth() + 1}-${referenceDate.getDate()}`;
+    return GenerateDate.generateDateObject(
+      year, referenceDate.getMonth() + 1, referenceDate.getDate(),
+    );
   }
 };
 
@@ -354,43 +391,47 @@ Feiertage.getAdvent3 = (format, year) => {
   referenceDate.setDate(referenceDate.getDate() - 7);
 
   if (format === formatDE) {
-    return `${referenceDate.getDate()}.${referenceDate.getMonth() + 1}.${year}`;
+    return GenerateDate.generateDateStringDE(
+      year, referenceDate.getMonth() + 1, referenceDate.getDate(),
+    );
   } if (format === formatDateObj) {
-    return `${year}-${referenceDate.getMonth() + 1}-${referenceDate.getDate()}`;
+    return GenerateDate.generateDateObject(
+      year, referenceDate.getMonth() + 1, referenceDate.getDate(),
+    );
   }
 };
 
 Feiertage.getAdvent4 = (format, year) => Advent.calcAdvent4(format, 24, year);
 
-Feiertage.getHeiligabend = (foramt, year) => {
-  if (foramt === formatDE) {
-    return `24.12.${year}`;
-  } if (foramt === formatDateObj) {
-    return `${year}-12-24`;
+Feiertage.getHeiligabend = (format, year) => {
+  if (format === formatDE) {
+    return GenerateDate.generateDateStringDE(year, 12, 24);
+  } if (format === formatDateObj) {
+    return GenerateDate.generateDateObject(year, 12, 24);
   }
 };
 
 Feiertage.getWeihnachtsfeiertag1 = (format, year) => {
   if (format === formatDE) {
-    return `25.12.${year}`;
+    return GenerateDate.generateDateStringDE(year, 12, 25);
   } if (format === formatDateObj) {
-    return `${year}-12-25`;
+    return GenerateDate.generateDateObject(year, 12, 25);
   }
 };
 
 Feiertage.getWeihnachtsfeiertag2 = (format, year) => {
   if (format === formatDE) {
-    return `26.12.${year}`;
+    return GenerateDate.generateDateStringDE(year, 12, 26);
   } if (format === formatDateObj) {
-    return `${year}-12-26`;
+    return GenerateDate.generateDateObject(year, 12, 26);
   }
 };
 
 Feiertage.getSilvester = (format, year) => {
   if (format === formatDE) {
-    return `31.12.${year}`;
+    return GenerateDate.generateDateStringDE(year, 12, 31);
   } if (format === formatDateObj) {
-    return `${year}-12-31`;
+    return GenerateDate.generateDateObject(year, 12, 31);
   }
 };
 
