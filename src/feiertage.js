@@ -1,11 +1,14 @@
+import Easter from './easter';
+import Advent from './advent';
+
 /* eslint-disable consistent-return */
 const Feiertage = {};
 
 Feiertage.formatDateObj = 'dateObj';
 Feiertage.formatDE = 'DE';
 
-const Easter = require('./easter.js');
-const Advent = require('./advent.js');
+// const Easter = require('./easter.js');
+// const Advent = require('./advent.js');
 
 const formatDateObj = 'dateObj';
 const formatDE = 'DE';
@@ -14,7 +17,7 @@ Feiertage.getNeujahr = (format, year) => {
   if (format === formatDE) {
     return `1.1.${year}`;
   } if (format === formatDateObj) {
-    return `${year}-1-1`;
+    return new Date(`${year}-01-01T00:00:00`);
   }
 };
 
@@ -22,7 +25,7 @@ Feiertage.getBerchtoldstag = (format, year) => {
   if (format === formatDE) {
     return `2.1.${year}`;
   } if (format === formatDateObj) {
-    return `${year}-1-2`;
+    return new Date(`${year}-01-02T00:00:00`);
   }
 };
 
@@ -30,7 +33,7 @@ Feiertage.getHeiligeDreiKoenige = (format, year) => {
   if (format === formatDE) {
     return `6.1.${year}`;
   } if (format === formatDateObj) {
-    return `${year}-1-6`;
+    return new Date(`${year}-01-06T00:00:00`);
   }
 };
 
@@ -38,10 +41,20 @@ Feiertage.getWeiberfastnacht = (format, year) => {
   const referenceDate = new Date(Feiertage.getOstersonntag(formatDateObj, year));
   referenceDate.setDate(referenceDate.getDate() - 52);
 
+  let referenceDay = (referenceDate.getDate()).toString();
+  if (referenceDay.length === 1) {
+    referenceDay = `0${referenceDay}`;
+  }
+
+  let referenceMonth = (referenceDate.getMonth() + 1).toString();
+  if (referenceMonth.length === 1) {
+    referenceMonth = `0${referenceMonth}`;
+  }
+
   if (format === formatDE) {
-    return `${referenceDate.getDate()}.${referenceDate.getMonth() + 1}.${year}`;
+    return `${referenceDay}.${referenceMonth}.${year}`;
   } if (format === formatDateObj) {
-    return `${year}-${referenceDate.getMonth() + 1}-${referenceDate.getDate()}`;
+    return new Date(`${year}-${referenceMonth}-${referenceDay}`);
   }
 };
 
@@ -49,7 +62,7 @@ Feiertage.getValentinstag = (format, year) => {
   if (format === formatDE) {
     return `14.2.${year}`;
   } if (format === formatDateObj) {
-    return `${year}-2-14`;
+    return new Date(`${year}-02-14`);
   }
 };
 
@@ -60,7 +73,7 @@ Feiertage.getRosenmontag = (format, year) => {
   if (format === formatDE) {
     return `${referenceDate.getDate()}.${referenceDate.getMonth() + 1}.${year}`;
   } if (format === formatDateObj) {
-    return `${year}-${referenceDate.getMonth() + 1}-${referenceDate.getDate()}`;
+    return new Date(`${year}-0${referenceDate.getMonth() + 1}-${referenceDate.getDate()}`);
   }
 };
 
@@ -71,7 +84,7 @@ Feiertage.getFastnachtsdienstag = (format, year) => {
   if (format === formatDE) {
     return `${referenceDate.getDate()}.${referenceDate.getMonth() + 1}.${year}`;
   } if (format === formatDateObj) {
-    return `${year}-${referenceDate.getMonth() + 1}-${referenceDate.getDate()}`;
+    return new Date(`${year}-0${referenceDate.getMonth() + 1}-${referenceDate.getDate()}`);
   }
 };
 
@@ -82,7 +95,7 @@ Feiertage.getAschermittwoch = (format, year) => {
   if (format === formatDE) {
     return `${referenceDate.getDate()}.${referenceDate.getMonth() + 1}.${year}`;
   } if (format === formatDateObj) {
-    return `${year}-${referenceDate.getMonth() + 1}-${referenceDate.getDate()}`;
+    return new Date(`${year}-0${referenceDate.getMonth() + 1}-${referenceDate.getDate()}`);
   }
 };
 
@@ -90,7 +103,7 @@ Feiertage.getStJosef = (format, year) => {
   if (format === formatDE) {
     return `19.3.${year}`;
   } if (format === formatDateObj) {
-    return `${year}-3-19`;
+    return new Date(`${year}-03-19`);
   }
 };
 
@@ -101,7 +114,7 @@ Feiertage.getGruendonnerstag = (format, year) => {
   if (format === formatDE) {
     return `${referenceDate.getDate()}.${referenceDate.getMonth() + 1}.${year}`;
   } if (format === formatDateObj) {
-    return `${year}-${referenceDate.getMonth() + 1}-${referenceDate.getDate()}`;
+    return new Date(`${year}-0${referenceDate.getMonth() + 1}-${referenceDate.getDate()}`);
   }
 };
 
@@ -109,10 +122,20 @@ Feiertage.getKarfreitag = (format, year) => {
   const referenceDate = new Date(Feiertage.getOstersonntag(formatDateObj, year));
   referenceDate.setDate(referenceDate.getDate() - 2);
 
+  let referenceMonth = referenceDate.getMonth() + 1;
+  if (referenceMonth.lengt === 0) {
+    referenceMonth = `0${referenceDate.getMonth() + 1}`;
+  }
+
+  let referenceDay = referenceDate.getDate();
+  if (referenceDay.lengt === 0) {
+    referenceDay = `0${referenceDate.getDate()}`;
+  }
+
   if (format === formatDE) {
-    return `${referenceDate.getDate()}.${referenceDate.getMonth() + 1}.${year}`;
+    return `${referenceDay}.${referenceMonth}.${year}`;
   } if (format === formatDateObj) {
-    return `${year}-${referenceDate.getMonth() + 1}-${referenceDate.getDate()}`;
+    return new Date(`${year}-0${referenceMonth}-${referenceDay}`);
   }
 };
 
