@@ -1,6 +1,6 @@
-import GenerateDate from './generate-dateObj';
-import Easter from './easter';
-import Advent from './advent';
+const GenerateDate = require('./generate-dateObj');
+const Easter = require('./easter');
+const Advent = require('./advent');
 
 /* eslint-disable consistent-return */
 const Feiertage = {};

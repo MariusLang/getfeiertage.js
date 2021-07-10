@@ -1,4 +1,4 @@
-import GenerateDate from './generate-dateObj';
+const GenerateDate = require('./generate-dateObj');
 
 const Easter = {};
 
