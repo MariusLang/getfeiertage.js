@@ -11,7 +11,7 @@ GenerateDate.generateDateObject = (year, month, day) => {
     dateDay = `0${dateDay}`;
   }
 
-  return new Date(`${year}-${dateMonth}-${dateDay}`).setHours(0, 0, 0, 0);
+  return new Date(`${year}-${dateMonth}-${dateDay}`);
 };
 
 GenerateDate.generateDateStringDE = (year, month, day) => {
