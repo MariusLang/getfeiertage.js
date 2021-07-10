@@ -1,3 +1,3 @@
 import Feiertage from './src/feiertage';
 
-exports.Feiertage = Feiertage;
+module.exports.Feiertage = Feiertage;
