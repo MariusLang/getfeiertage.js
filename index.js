@@ -1,3 +1,3 @@
-import Feiertage from './src/feiertage';
+const Feiertage = require('./src/feiertage');
 
-module.exports.Feiertage = Feiertage;
+exports.Feiertage = Feiertage;
