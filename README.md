@@ -3,6 +3,7 @@
 [![NPM](https://img.shields.io/npm/v/getfeiertage.js)](https://www.npmjs.com/package/getfeiertage.js)
 [![NPM_downloads](https://img.shields.io/npm/dm/getfeiertage.js)](https://www.npmjs.com/package/getfeiertage.js)
 [![issues](https://img.shields.io/github/issues/mariuslang/getfeiertage.js)](https://github.com/MariusLang/getfeiertage.js)
+[![publish](https://github.com/MariusLang/getfeiertage.js/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/MariusLang/getfeiertage.js/actions/workflows/npm-publish.yml)
 
 [![NPM](https://nodei.co/npm/getfeiertage.js.png?compact=true)](https://nodei.co/npm/getfeiertage.js/)
 
