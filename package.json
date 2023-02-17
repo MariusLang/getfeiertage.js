@@ -1,5 +1,5 @@
 {
-  "author": "Marius Lang <lang.marius@t-online.de>",
+  "author": "Marius Lang <marius@mariuslang.de>",
   "dependencies": {},
   "dprecated": false,
   "description": "npm package to get german, austrian and swiss holidays",
@@ -17,7 +17,7 @@
   ],
   "license": "MIT",
   "name": "getfeiertage.js",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "main": "index.js",
   "repository": {
     "type": "git",
