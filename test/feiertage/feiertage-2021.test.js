@@ -1,4 +1,4 @@
-import { Feiertage } from '../index';
+import { Feiertage } from '../../index';
 
 const year = 2021;
 
