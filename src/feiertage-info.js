@@ -2,6 +2,31 @@ const Feiertage = require('./feiertage');
 
 const FeiertageInfo = {};
 
+FeiertageInfo.getAll = (format, year) => [
+  FeiertageInfo.getNeujahr(format, year), FeiertageInfo.getBerchtoldstag(format, year),
+  FeiertageInfo.getHeiligeDreiKoenige(format, year), FeiertageInfo.getWeiberfastnacht(format, year),
+  FeiertageInfo.getValentinstag(format, year), FeiertageInfo.getRosenmontag(format, year),
+  FeiertageInfo.getFastnachtsdienstag(format, year), FeiertageInfo.getAschermittwoch(format, year),
+  FeiertageInfo.getStJosef(format, year), FeiertageInfo.getGruendonnerstag(format, year),
+  FeiertageInfo.getKarfreitag(format, year), FeiertageInfo.getOstersonntag(format, year),
+  FeiertageInfo.getOstermontag(format, year), FeiertageInfo.getFirstMay(format, year),
+  FeiertageInfo.getStFlorian(format, year), FeiertageInfo.getChristiHimmelfahrt(format, year),
+  FeiertageInfo.getPfingstsonntag(format, year), Feiertage.getPfingstmontag(format, year),
+  FeiertageInfo.getFronleichnam(format, year), FeiertageInfo.getPeterUndPaul(format, year),
+  FeiertageInfo.getBundesfeierCH(format, year), FeiertageInfo.getMariaHimmelfahrt(format, year),
+  FeiertageInfo.getStRupert(format, year), FeiertageInfo.getTagDerDeutschenEinheit(format, year),
+  FeiertageInfo.getTagDerVolksabstimmung(format, year),
+  FeiertageInfo.getNationalfeiertagAT(format, year),
+  FeiertageInfo.getHalloween(format, year), FeiertageInfo.getAllerheiligen(format, year),
+  FeiertageInfo.getStMartin(format, year), FeiertageInfo.getStLeopold(format, year),
+  FeiertageInfo.getBussUndBettag(format, year), FeiertageInfo.getNikolaus(format, year),
+  FeiertageInfo.getMariaeEmpfaengnis(format, year), FeiertageInfo.getAdvent1(format, year),
+  FeiertageInfo.getAdvent2(format, year), FeiertageInfo.getAdvent3(format, year),
+  FeiertageInfo.getAdvent4(format, year), FeiertageInfo.getHeiligabend(format, year),
+  FeiertageInfo.getWeihnachtsfeiertag1(format, year),
+  FeiertageInfo.getWeihnachtsfeiertag2(format, year), FeiertageInfo.getSilvester(format, year),
+];
+
 FeiertageInfo.getNeujahr = (year) => {
   const obj = {
     name: 'Neujahr',
