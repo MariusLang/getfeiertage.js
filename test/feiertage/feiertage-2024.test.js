@@ -1,6 +1,6 @@
-import { Feiertage } from '../index';
+import { Feiertage } from '../../index';
 
-const year = 2021;
+const year = 2024;
 
 test('get Neujahr', () => {
   expect(Feiertage.getNeujahr(Feiertage.formatDateObj, year).valueOf()).toBe(new Date(`${year}-01-01`).valueOf());
@@ -18,8 +18,8 @@ test('get Heilige drei Könige', () => {
 });
 
 test('get Weiberfastnacht', () => {
-  expect(Feiertage.getWeiberfastnacht(Feiertage.formatDateObj, year).valueOf()).toBe(new Date(`${year}-02-11`).valueOf());
-  expect(Feiertage.getWeiberfastnacht(Feiertage.formatDE, year)).toBe(`11.02.${year}`);
+  expect(Feiertage.getWeiberfastnacht(Feiertage.formatDateObj, year).valueOf()).toBe(new Date(`${year}-02-08`).valueOf());
+  expect(Feiertage.getWeiberfastnacht(Feiertage.formatDE, year)).toBe(`08.02.${year}`);
 });
 
 test('get Valentinstag', () => {
@@ -28,18 +28,18 @@ test('get Valentinstag', () => {
 });
 
 test('get Rosenmontag', () => {
-  expect(Feiertage.getRosenmontag(Feiertage.formatDateObj, year).valueOf()).toBe(new Date(`${year}-02-15`).valueOf());
-  expect(Feiertage.getRosenmontag(Feiertage.formatDE, year)).toBe(`15.02.${year}`);
+  expect(Feiertage.getRosenmontag(Feiertage.formatDateObj, year).valueOf()).toBe(new Date(`${year}-02-12`).valueOf());
+  expect(Feiertage.getRosenmontag(Feiertage.formatDE, year)).toBe(`12.02.${year}`);
 });
 
 test('get Fastnachtsdienstag', () => {
-  expect(Feiertage.getFastnachtsdienstag(Feiertage.formatDateObj, year).valueOf()).toBe(new Date(`${year}-02-16`).valueOf());
-  expect(Feiertage.getFastnachtsdienstag(Feiertage.formatDE, year)).toBe(`16.02.${year}`);
+  expect(Feiertage.getFastnachtsdienstag(Feiertage.formatDateObj, year).valueOf()).toBe(new Date(`${year}-02-13`).valueOf());
+  expect(Feiertage.getFastnachtsdienstag(Feiertage.formatDE, year)).toBe(`13.02.${year}`);
 });
 
 test('get Aschermittwoch', () => {
-  expect(Feiertage.getAschermittwoch(Feiertage.formatDateObj, year).valueOf()).toBe(new Date(`${year}-02-17`).valueOf());
-  expect(Feiertage.getAschermittwoch(Feiertage.formatDE, year)).toBe(`17.02.${year}`);
+  expect(Feiertage.getAschermittwoch(Feiertage.formatDateObj, year).valueOf()).toBe(new Date(`${year}-02-14`).valueOf());
+  expect(Feiertage.getAschermittwoch(Feiertage.formatDE, year)).toBe(`14.02.${year}`);
 });
 
 test('get St. Josef', () => {
@@ -48,23 +48,23 @@ test('get St. Josef', () => {
 });
 
 test('get Gründonnerstag', () => {
-  expect(Feiertage.getGruendonnerstag(Feiertage.formatDateObj, year).valueOf()).toBe(new Date(`${year}-04-01`).valueOf());
-  expect(Feiertage.getGruendonnerstag(Feiertage.formatDE, year)).toBe(`01.04.${year}`);
+  expect(Feiertage.getGruendonnerstag(Feiertage.formatDateObj, year).valueOf()).toBe(new Date(`${year}-03-28`).valueOf());
+  expect(Feiertage.getGruendonnerstag(Feiertage.formatDE, year)).toBe(`28.03.${year}`);
 });
 
 test('get Karfreitag', () => {
-  expect(Feiertage.getKarfreitag(Feiertage.formatDateObj, year).valueOf()).toBe(new Date(`${year}-04-02`).valueOf());
-  expect(Feiertage.getKarfreitag(Feiertage.formatDE, year)).toBe(`02.04.${year}`);
+  expect(Feiertage.getKarfreitag(Feiertage.formatDateObj, year).valueOf()).toBe(new Date(`${year}-03-29`).valueOf());
+  expect(Feiertage.getKarfreitag(Feiertage.formatDE, year)).toBe(`29.03.${year}`);
 });
 
 test('get Ostersonntag', () => {
-  expect(Feiertage.getOstersonntag(Feiertage.formatDateObj, year).valueOf()).toBe(new Date(`${year}-04-04`).valueOf());
-  expect(Feiertage.getOstersonntag(Feiertage.formatDE, year)).toBe(`04.04.${year}`);
+  expect(Feiertage.getOstersonntag(Feiertage.formatDateObj, year).valueOf()).toBe(new Date(`${year}-03-31`).valueOf());
+  expect(Feiertage.getOstersonntag(Feiertage.formatDE, year)).toBe(`31.03.${year}`);
 });
 
 test('get Ostermontag', () => {
-  expect(Feiertage.getOstermontag(Feiertage.formatDateObj, year).valueOf()).toBe(new Date(`${year}-04-05`).valueOf());
-  expect(Feiertage.getOstermontag(Feiertage.formatDE, year)).toBe(`05.04.${year}`);
+  expect(Feiertage.getOstermontag(Feiertage.formatDateObj, year).valueOf()).toBe(new Date(`${year}-04-01`).valueOf());
+  expect(Feiertage.getOstermontag(Feiertage.formatDE, year)).toBe(`01.04.${year}`);
 });
 
 test('get 1. Mai', () => {
@@ -78,23 +78,23 @@ test('get St. Florian', () => {
 });
 
 test('get Christi Himmelfahrt', () => {
-  expect(Feiertage.getChristiHimmelfahrt(Feiertage.formatDateObj, year).valueOf()).toBe(new Date(`${year}-05-13`).valueOf());
-  expect(Feiertage.getChristiHimmelfahrt(Feiertage.formatDE, year)).toBe(`13.05.${year}`);
+  expect(Feiertage.getChristiHimmelfahrt(Feiertage.formatDateObj, year).valueOf()).toBe(new Date(`${year}-05-09`).valueOf());
+  expect(Feiertage.getChristiHimmelfahrt(Feiertage.formatDE, year)).toBe(`09.05.${year}`);
 });
 
 test('get Pfingstsonntag', () => {
-  expect(Feiertage.getPfingstsonntag(Feiertage.formatDateObj, year).valueOf()).toBe(new Date(`${year}-05-23`).valueOf());
-  expect(Feiertage.getPfingstsonntag(Feiertage.formatDE, year)).toBe(`23.05.${year}`);
+  expect(Feiertage.getPfingstsonntag(Feiertage.formatDateObj, year).valueOf()).toBe(new Date(`${year}-05-19`).valueOf());
+  expect(Feiertage.getPfingstsonntag(Feiertage.formatDE, year)).toBe(`19.05.${year}`);
 });
 
 test('get Pfingstmontag', () => {
-  expect(Feiertage.getPfingstmontag(Feiertage.formatDateObj, year).valueOf()).toBe(new Date(`${year}-05-24`).valueOf());
-  expect(Feiertage.getPfingstmontag(Feiertage.formatDE, year)).toBe(`24.05.${year}`);
+  expect(Feiertage.getPfingstmontag(Feiertage.formatDateObj, year).valueOf()).toBe(new Date(`${year}-05-20`).valueOf());
+  expect(Feiertage.getPfingstmontag(Feiertage.formatDE, year)).toBe(`20.05.${year}`);
 });
 
 test('get Fronleichnam', () => {
-  expect(Feiertage.getFronleichnam(Feiertage.formatDateObj, year).valueOf()).toBe(new Date(`${year}-06-03`).valueOf());
-  expect(Feiertage.getFronleichnam(Feiertage.formatDE, year)).toBe(`03.06.${year}`);
+  expect(Feiertage.getFronleichnam(Feiertage.formatDateObj, year).valueOf()).toBe(new Date(`${year}-05-30`).valueOf());
+  expect(Feiertage.getFronleichnam(Feiertage.formatDE, year)).toBe(`30.05.${year}`);
 });
 
 test('get Peter und Paul', () => {
@@ -153,8 +153,8 @@ test('get St. Leopold', () => {
 });
 
 test('get Buß und Bettag', () => {
-  expect(Feiertage.getBussUndBettag(Feiertage.formatDateObj, year).valueOf()).toBe(new Date(`${year}-11-17`).valueOf());
-  expect(Feiertage.getBussUndBettag(Feiertage.formatDE, year)).toBe(`17.11.${year}`);
+  expect(Feiertage.getBussUndBettag(Feiertage.formatDateObj, year).valueOf()).toBe(new Date(`${year}-11-20`).valueOf());
+  expect(Feiertage.getBussUndBettag(Feiertage.formatDE, year)).toBe(`20.11.${year}`);
 });
 
 test('get Nikolaus', () => {
@@ -168,23 +168,23 @@ test('get Mariä Empfängnis', () => {
 });
 
 test('get 1. Advent', () => {
-  expect(Feiertage.getAdvent1(Feiertage.formatDateObj, year).valueOf()).toBe(new Date(`${year}-11-28`).valueOf());
-  expect(Feiertage.getAdvent1(Feiertage.formatDE, year)).toBe(`28.11.${year}`);
+  expect(Feiertage.getAdvent1(Feiertage.formatDateObj, year).valueOf()).toBe(new Date(`${year}-12-01`).valueOf());
+  expect(Feiertage.getAdvent1(Feiertage.formatDE, year)).toBe(`01.12.${year}`);
 });
 
 test('get 2. Advent', () => {
-  expect(Feiertage.getAdvent2(Feiertage.formatDateObj, year).valueOf()).toBe(new Date(`${year}-12-05`).valueOf());
-  expect(Feiertage.getAdvent2(Feiertage.formatDE, year)).toBe(`05.12.${year}`);
+  expect(Feiertage.getAdvent2(Feiertage.formatDateObj, year).valueOf()).toBe(new Date(`${year}-12-08`).valueOf());
+  expect(Feiertage.getAdvent2(Feiertage.formatDE, year)).toBe(`08.12.${year}`);
 });
 
 test('get 3. Advent', () => {
-  expect(Feiertage.getAdvent3(Feiertage.formatDateObj, year).valueOf()).toBe(new Date(`${year}-12-12`).valueOf());
-  expect(Feiertage.getAdvent3(Feiertage.formatDE, year)).toBe(`12.12.${year}`);
+  expect(Feiertage.getAdvent3(Feiertage.formatDateObj, year).valueOf()).toBe(new Date(`${year}-12-15`).valueOf());
+  expect(Feiertage.getAdvent3(Feiertage.formatDE, year)).toBe(`15.12.${year}`);
 });
 
 test('get 4. Advent', () => {
-  expect(Feiertage.getAdvent4(Feiertage.formatDateObj, year).valueOf()).toBe(new Date(`${year}-12-19`).valueOf());
-  expect(Feiertage.getAdvent4(Feiertage.formatDE, year)).toBe(`19.12.${year}`);
+  expect(Feiertage.getAdvent4(Feiertage.formatDateObj, year).valueOf()).toBe(new Date(`${year}-12-22`).valueOf());
+  expect(Feiertage.getAdvent4(Feiertage.formatDE, year)).toBe(`22.12.${year}`);
 });
 
 test('get Heiligabend', () => {
