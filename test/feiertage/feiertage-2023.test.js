@@ -2,6 +2,10 @@ import { Feiertage } from '../../index';
 
 const year = 2023;
 
+test('get all', () => {
+  expect(Feiertage.getAll(Feiertage.formatDateObj, year).length).toBe(41);
+});
+
 test('get Neujahr', () => {
   expect(Feiertage.getNeujahr(Feiertage.formatDateObj, year).valueOf()).toBe(new Date(`${year}-01-01`).valueOf());
   expect(Feiertage.getNeujahr(Feiertage.formatDE, year)).toBe(`01.01.${year}`);
