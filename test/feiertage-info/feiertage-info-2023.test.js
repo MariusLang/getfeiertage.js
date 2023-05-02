@@ -2,6 +2,10 @@ import { FeiertageInfo } from '../../index';
 
 const year = 2023;
 
+test('get all', () => {
+  expect(FeiertageInfo.getAll(year).length).toBe(41);
+});
+
 test('get Neujahr Info', () => {
   const name = 'Neujahr';
   const country = ['DE', 'AT', 'CH'];

@@ -11,6 +11,30 @@ Feiertage.formatDE = 'DE';
 // const Easter = require('./easter.js');
 // const Advent = require('./advent.js');
 
+Feiertage.getAll = (format, year) => [
+  Feiertage.getNeujahr(format, year), Feiertage.getBerchtoldstag(format, year),
+  Feiertage.getHeiligeDreiKoenige(format, year), Feiertage.getWeiberfastnacht(format, year),
+  Feiertage.getValentinstag(format, year), Feiertage.getRosenmontag(format, year),
+  Feiertage.getFastnachtsdienstag(format, year), Feiertage.getAschermittwoch(format, year),
+  Feiertage.getStJosef(format, year), Feiertage.getGruendonnerstag(format, year),
+  Feiertage.getKarfreitag(format, year), Feiertage.getOstersonntag(format, year),
+  Feiertage.getOstermontag(format, year), Feiertage.getFirstMay(format, year),
+  Feiertage.getStFlorian(format, year), Feiertage.getChristiHimmelfahrt(format, year),
+  Feiertage.getPfingstsonntag(format, year), Feiertage.getPfingstmontag(format, year),
+  Feiertage.getFronleichnam(format, year), Feiertage.getPeterUndPaul(format, year),
+  Feiertage.getBundesfeierCH(format, year), Feiertage.getMariaHimmelfahrt(format, year),
+  Feiertage.getStRupert(format, year), Feiertage.getTagDerDeutschenEinheit(format, year),
+  Feiertage.getTagDerVolksabstimmung(format, year), Feiertage.getNationalfeiertagAT(format, year),
+  Feiertage.getHalloween(format, year), Feiertage.getAllerheiligen(format, year),
+  Feiertage.getStMartin(format, year), Feiertage.getStLeopold(format, year),
+  Feiertage.getBussUndBettag(format, year), Feiertage.getNikolaus(format, year),
+  Feiertage.getMariaeEmpfaengnis(format, year), Feiertage.getAdvent1(format, year),
+  Feiertage.getAdvent2(format, year), Feiertage.getAdvent3(format, year),
+  Feiertage.getAdvent4(format, year), Feiertage.getHeiligabend(format, year),
+  Feiertage.getWeihnachtsfeiertag1(format, year), Feiertage.getWeihnachtsfeiertag2(format, year),
+  Feiertage.getSilvester(format, year),
+];
+
 const formatDateObj = 'dateObj';
 const formatDE = 'DE';
 
