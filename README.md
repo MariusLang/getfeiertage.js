@@ -39,6 +39,30 @@ let neujahrDateDE = Feiertage.getNeujahr(Feiertage.formatDE, 2023); // returns 0
 #### Output
 The output is the date of the requested holiday for the specified year in the specified format. The exact format of the output will depend on the [format parameter](#date-formats) chosen.
 
+### FeiertageInfo
+```javascript
+const FeiertageInfo = require('getfeiertage.js').FeiertageInfo;
+let neujahrInfo = FeiertageInfo.getNeujahr(2023);
+```
+
+#### Parameters
+- **year:** specifies the year for which holidays should be output
+
+#### Output
+The output is formatted like the JSON Object below.
+```javascript
+{
+  name: 'Neujahr', // name of the holiday
+  country: ['DE', 'AT', 'CH'], // Array with country codes
+  dateObj: 2023-01-01, // javascript date object
+  dateDE: '01.01.2023', // date in german format
+}
+```
+- **name:** name of the holiday
+- **country:** Array with country codes (DE = Germany, AT = Austria, CH = Switzerland)
+- **dateObj:** [date object](#date-object)
+- **dateDE:** [date in german format](#german-date)
+
 ## Date Formats
 
 ### German Date
@@ -54,6 +78,7 @@ let neujahrDateObj = Feiertage.getNeujahr(Feiertage.formatDateObj, 2023); // ret
 Here, the date format is set to the **Date Object** Format (```Feiertage.formatDateObj```). Therefore, the output for Neujahr in 2023 is **2023-01-01**. This is compatible with the default javascript date object.
 
 ## Usage
+A list of all available holidays can be found [here](./holiday-list.md).
 ```javascript
 const Feiertage = require('getfeiertage.js').Feiertage;
 const FeiertageInfo = require('getfeiertage.js').FeiertageInfo;
@@ -84,8 +109,8 @@ let valentinstag = Feiertage.getValentinstag(format, year);
 let valentinstagInfo = FeiertageInfo.getValentinstag(year);
 
 // get Rosenmontag
-let valentinstag = Feiertage.getValentinstag(format, year);
-let valentinstagInfo = FeiertageInfo.getValentinstag(year);
+let valentinstag = Feiertage.getRosenmontag(format, year);
+let valentinstagInfo = FeiertageInfo.getRosenmontag(year);
 
 // get Fastnachtsdienstag
 let fastnachtsdienstag = Feiertage.getFastnachtsdienstag(format, year);
@@ -104,8 +129,8 @@ let gruendonnerstag = Feiertage.getGruendonnerstag(format, year);
 let gruendonnerstagInfo = FeiertageInfo.getGruendonnerstag(year);
 
 // get Karfreitag
-let karfreitag = Feiertag.getKarfreitag(format, year);
-let karfreitagInfo = FeiertagInfo.getKarfreitag(year);
+let karfreitag = Feiertage.getKarfreitag(format, year);
+let karfreitagInfo = FeiertageInfo.getKarfreitag(year);
 
 // get Easter Sunday
 let easterSunday = Feiertage.getOstersonntag(format, year);
