@@ -79,6 +79,9 @@ Here, the date format is set to the **Date Object** Format (```Feiertage.formatD
 
 ## Usage
 A list of all available holidays can be found [here](./holiday-list.md).
+
+It's difficult to maintain a npm package that contains German, Austrain and also Swiss holidays. If there are holidays missing, feel free to open an issue or a pull request. I will add those holidays immediately.
+
 ```javascript
 const Feiertage = require('getfeiertage.js').Feiertage;
 const FeiertageInfo = require('getfeiertage.js').FeiertageInfo;
