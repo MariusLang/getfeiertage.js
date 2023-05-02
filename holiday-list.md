@@ -1,6 +1,8 @@
 # getfeiertage.js - available holidays
 
-Please read the [documentation](./README.md) first.
+**Please read the [documentation](./README.md) first.**
+
+It's difficult to maintain a npm package that contains German, Austrain and also Swiss holidays. If there are holidays missing, feel free to open an issue or a pull request. I will add those holidays immediately.
 
 | Name                      | country    | javascript - Feiertage                             | javascript - FeiertageInfo                     |
 |---------------------------|------------|----------------------------------------------------|------------------------------------------------|
