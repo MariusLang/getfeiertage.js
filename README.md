@@ -91,6 +91,10 @@ const format = Feiertage.formatDateObj;
 
 const year = 2023;
 
+// get an array of all holidays
+let feiertageAll = Feiertage.getAll(format, year);
+let feiertageInfoAll = FeiertageInfo.getAll(year);
+
 // get New Year
 let neujahr = Feiertage.getNeujahr(format, year);
 let neujahrInfo = FeiertageInfo.getNeujahr(year);

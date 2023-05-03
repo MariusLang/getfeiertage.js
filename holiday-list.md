@@ -4,6 +4,17 @@
 
 It's difficult to maintain a npm package that contains German, Austrain and also Swiss holidays. If there are holidays missing, feel free to open an issue or a pull request. I will add those holidays immediately.
 
+It's possible to get an array of all holidays listed below by running the following code:
+```javascript
+const Feiertage = require('getfeiertage.js').Feiertage;
+const FeiertageInfo = require('getfeiertage.js').FeiertageInfo;
+
+let feiertageAll = Feiertage.getAll(Feiertage.formatDateObj, 2023);
+let feiertageInfoAll = FeiertageInfo.getAll(2023);
+```
+
+## List of all holidays
+
 | Name                      | country    | javascript - Feiertage                             | javascript - FeiertageInfo                     |
 |---------------------------|------------|----------------------------------------------------|------------------------------------------------|
 | Neujahr                   | DE, AT, CH | Feiertage.getNeujahr(format, year);                | FeiertageInfo.getNeujahr(year);                |
