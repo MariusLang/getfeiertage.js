@@ -14,6 +14,7 @@ Easter.calcEasterSunday = (format, year) => {
   if (easterSundayDay === 35 || (easterSundayDay === 34 && b === 28 && a > 10)) {
     easterSundayDay -= 7;
   }
+
   // generate easterDate and change Parameters to easter Date
   const easterDate = new Date(year, 2, 22);
   easterDate.setTime(easterDate.getTime() + 86400000 * easterSundayDay);
@@ -24,11 +25,14 @@ Easter.calcEasterSunday = (format, year) => {
     return GenerateDate.generateDateStringDE(
       year, easterMonth, easterDay,
     );
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(
       year, easterMonth, easterDay,
     );
   }
+
   return GenerateDate.generateDateObject(
     year, easterMonth, easterDay,
   );

@@ -15,14 +15,16 @@ Advent.calcAdvent4 = (format, day, year) => {
       return GenerateDate.generateDateStringDE(
         year, checkMonth, day,
       );
-    } if (format === formatDateObj) {
+    }
+
+    if (format === formatDateObj) {
       return GenerateDate.generateDateObject(
         year, checkMonth, day,
       );
     }
-  } /* else {
-    return Advent.calcAdvent4(format, day - 1, year);
-  } */
+  }
+
   return Advent.calcAdvent4(format, day - 1, year);
 };
+
 module.exports = Advent;

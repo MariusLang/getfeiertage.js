@@ -41,7 +41,9 @@ const formatDE = 'DE';
 Feiertage.getNeujahr = (format, year) => {
   if (format === formatDE) {
     return GenerateDate.generateDateStringDE(year, 1, 1);
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(year, 1, 1);
   }
 };
@@ -49,7 +51,9 @@ Feiertage.getNeujahr = (format, year) => {
 Feiertage.getBerchtoldstag = (format, year) => {
   if (format === formatDE) {
     return GenerateDate.generateDateStringDE(year, 1, 2);
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(year, 1, 2);
   }
 };
@@ -57,7 +61,9 @@ Feiertage.getBerchtoldstag = (format, year) => {
 Feiertage.getHeiligeDreiKoenige = (format, year) => {
   if (format === formatDE) {
     return GenerateDate.generateDateStringDE(year, 1, 6);
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(year, 1, 6);
   }
 };
@@ -70,7 +76,9 @@ Feiertage.getWeiberfastnacht = (format, year) => {
     return GenerateDate.generateDateStringDE(
       year, referenceDate.getMonth() + 1, referenceDate.getDate(),
     );
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(
       year, referenceDate.getMonth() + 1, referenceDate.getDate(),
     );
@@ -80,7 +88,9 @@ Feiertage.getWeiberfastnacht = (format, year) => {
 Feiertage.getValentinstag = (format, year) => {
   if (format === formatDE) {
     return GenerateDate.generateDateStringDE(year, 2, 14);
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(year, 2, 14);
   }
 };
@@ -93,7 +103,9 @@ Feiertage.getRosenmontag = (format, year) => {
     return GenerateDate.generateDateStringDE(
       year, referenceDate.getMonth() + 1, referenceDate.getDate(),
     );
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(
       year, referenceDate.getMonth() + 1, referenceDate.getDate(),
     );
@@ -108,7 +120,9 @@ Feiertage.getFastnachtsdienstag = (format, year) => {
     return GenerateDate.generateDateStringDE(
       year, referenceDate.getMonth() + 1, referenceDate.getDate(),
     );
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(
       year, referenceDate.getMonth() + 1, referenceDate.getDate(),
     );
@@ -123,7 +137,9 @@ Feiertage.getAschermittwoch = (format, year) => {
     return GenerateDate.generateDateStringDE(
       year, referenceDate.getMonth() + 1, referenceDate.getDate(),
     );
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(
       year, referenceDate.getMonth() + 1, referenceDate.getDate(),
     );
@@ -133,7 +149,9 @@ Feiertage.getAschermittwoch = (format, year) => {
 Feiertage.getStJosef = (format, year) => {
   if (format === formatDE) {
     return GenerateDate.generateDateStringDE(year, 3, 19);
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(year, 3, 19);
   }
 };
@@ -146,7 +164,9 @@ Feiertage.getGruendonnerstag = (format, year) => {
     return GenerateDate.generateDateStringDE(
       year, referenceDate.getMonth() + 1, referenceDate.getDate(),
     );
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(
       year, referenceDate.getMonth() + 1, referenceDate.getDate(),
     );
@@ -161,7 +181,9 @@ Feiertage.getKarfreitag = (format, year) => {
     return GenerateDate.generateDateStringDE(
       year, referenceDate.getMonth() + 1, referenceDate.getDate(),
     );
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(
       year, referenceDate.getMonth() + 1, referenceDate.getDate(),
     );
@@ -178,7 +200,9 @@ Feiertage.getOstermontag = (format, year) => {
     return GenerateDate.generateDateStringDE(
       year, referenceDate.getMonth() + 1, referenceDate.getDate(),
     );
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(
       year, referenceDate.getMonth() + 1, referenceDate.getDate(),
     );
@@ -188,7 +212,9 @@ Feiertage.getOstermontag = (format, year) => {
 Feiertage.getFirstMay = (format, year) => {
   if (format === formatDE) {
     return GenerateDate.generateDateStringDE(year, 5, 1);
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(year, 5, 1);
   }
 };
@@ -196,7 +222,9 @@ Feiertage.getFirstMay = (format, year) => {
 Feiertage.getStFlorian = (format, year) => {
   if (format === formatDE) {
     return GenerateDate.generateDateStringDE(year, 5, 4);
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(year, 5, 4);
   }
 };
@@ -209,7 +237,9 @@ Feiertage.getChristiHimmelfahrt = (format, year) => {
     return GenerateDate.generateDateStringDE(
       year, referenceDate.getMonth() + 1, referenceDate.getDate(),
     );
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(
       year, referenceDate.getMonth() + 1, referenceDate.getDate(),
     );
@@ -224,7 +254,9 @@ Feiertage.getPfingstsonntag = (format, year) => {
     return GenerateDate.generateDateStringDE(
       year, referenceDate.getMonth() + 1, referenceDate.getDate(),
     );
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(
       year, referenceDate.getMonth() + 1, referenceDate.getDate(),
     );
@@ -239,7 +271,9 @@ Feiertage.getPfingstmontag = (format, year) => {
     return GenerateDate.generateDateStringDE(
       year, referenceDate.getMonth() + 1, referenceDate.getDate(),
     );
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(
       year, referenceDate.getMonth() + 1, referenceDate.getDate(),
     );
@@ -254,7 +288,9 @@ Feiertage.getFronleichnam = (format, year) => {
     return GenerateDate.generateDateStringDE(
       year, referenceDate.getMonth() + 1, referenceDate.getDate(),
     );
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(
       year, referenceDate.getMonth() + 1, referenceDate.getDate(),
     );
@@ -264,7 +300,9 @@ Feiertage.getFronleichnam = (format, year) => {
 Feiertage.getPeterUndPaul = (format, year) => {
   if (format === formatDE) {
     return GenerateDate.generateDateStringDE(year, 7, 29);
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(year, 7, 29);
   }
 };
@@ -272,7 +310,9 @@ Feiertage.getPeterUndPaul = (format, year) => {
 Feiertage.getBundesfeierCH = (format, year) => {
   if (format === formatDE) {
     return GenerateDate.generateDateStringDE(year, 8, 1);
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(year, 8, 1);
   }
 };
@@ -280,7 +320,9 @@ Feiertage.getBundesfeierCH = (format, year) => {
 Feiertage.getMariaHimmelfahrt = (format, year) => {
   if (format === formatDE) {
     return GenerateDate.generateDateStringDE(year, 8, 15);
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(year, 8, 15);
   }
 };
@@ -288,7 +330,9 @@ Feiertage.getMariaHimmelfahrt = (format, year) => {
 Feiertage.getStRupert = (format, year) => {
   if (format === formatDE) {
     return GenerateDate.generateDateStringDE(year, 9, 24);
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(year, 9, 24);
   }
 };
@@ -296,7 +340,9 @@ Feiertage.getStRupert = (format, year) => {
 Feiertage.getTagDerDeutschenEinheit = (format, year) => {
   if (format === formatDE) {
     return GenerateDate.generateDateStringDE(year, 10, 3);
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(year, 10, 3);
   }
 };
@@ -304,7 +350,9 @@ Feiertage.getTagDerDeutschenEinheit = (format, year) => {
 Feiertage.getTagDerVolksabstimmung = (format, year) => {
   if (format === formatDE) {
     return GenerateDate.generateDateStringDE(year, 10, 10);
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(year, 10, 10);
   }
 };
@@ -312,7 +360,9 @@ Feiertage.getTagDerVolksabstimmung = (format, year) => {
 Feiertage.getNationalfeiertagAT = (format, year) => {
   if (format === formatDE) {
     return GenerateDate.generateDateStringDE(year, 10, 26);
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(year, 10, 26);
   }
 };
@@ -320,7 +370,9 @@ Feiertage.getNationalfeiertagAT = (format, year) => {
 Feiertage.getHalloween = (format, year) => {
   if (format === formatDE) {
     return GenerateDate.generateDateStringDE(year, 10, 31);
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(year, 10, 31);
   }
 };
@@ -328,7 +380,9 @@ Feiertage.getHalloween = (format, year) => {
 Feiertage.getAllerheiligen = (format, year) => {
   if (format === formatDE) {
     return GenerateDate.generateDateStringDE(year, 11, 1);
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(year, 11, 1);
   }
 };
@@ -336,7 +390,9 @@ Feiertage.getAllerheiligen = (format, year) => {
 Feiertage.getStMartin = (format, year) => {
   if (format === formatDE) {
     return GenerateDate.generateDateStringDE(year, 11, 11);
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(year, 11, 11);
   }
 };
@@ -344,7 +400,9 @@ Feiertage.getStMartin = (format, year) => {
 Feiertage.getStLeopold = (format, year) => {
   if (format === formatDE) {
     return GenerateDate.generateDateStringDE(year, 11, 15);
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(year, 11, 15);
   }
 };
@@ -357,7 +415,9 @@ Feiertage.getBussUndBettag = (format, year) => {
     return GenerateDate.generateDateStringDE(
       year, referenceDate.getMonth() + 1, referenceDate.getDate(),
     );
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(
       year, referenceDate.getMonth() + 1, referenceDate.getDate(),
     );
@@ -367,7 +427,9 @@ Feiertage.getBussUndBettag = (format, year) => {
 Feiertage.getNikolaus = (format, year) => {
   if (format === formatDE) {
     return GenerateDate.generateDateStringDE(year, 12, 6);
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(year, 12, 6);
   }
 };
@@ -375,7 +437,9 @@ Feiertage.getNikolaus = (format, year) => {
 Feiertage.getMariaeEmpfaengnis = (format, year) => {
   if (format === formatDE) {
     return GenerateDate.generateDateStringDE(year, 12, 8);
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(year, 12, 8);
   }
 };
@@ -388,7 +452,9 @@ Feiertage.getAdvent1 = (format, year) => {
     return GenerateDate.generateDateStringDE(
       year, referenceDate.getMonth() + 1, referenceDate.getDate(),
     );
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(
       year, referenceDate.getMonth() + 1, referenceDate.getDate(),
     );
@@ -403,7 +469,9 @@ Feiertage.getAdvent2 = (format, year) => {
     return GenerateDate.generateDateStringDE(
       year, referenceDate.getMonth() + 1, referenceDate.getDate(),
     );
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(
       year, referenceDate.getMonth() + 1, referenceDate.getDate(),
     );
@@ -418,7 +486,9 @@ Feiertage.getAdvent3 = (format, year) => {
     return GenerateDate.generateDateStringDE(
       year, referenceDate.getMonth() + 1, referenceDate.getDate(),
     );
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(
       year, referenceDate.getMonth() + 1, referenceDate.getDate(),
     );
@@ -430,7 +500,9 @@ Feiertage.getAdvent4 = (format, year) => Advent.calcAdvent4(format, 24, year);
 Feiertage.getHeiligabend = (format, year) => {
   if (format === formatDE) {
     return GenerateDate.generateDateStringDE(year, 12, 24);
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(year, 12, 24);
   }
 };
@@ -438,7 +510,9 @@ Feiertage.getHeiligabend = (format, year) => {
 Feiertage.getWeihnachtsfeiertag1 = (format, year) => {
   if (format === formatDE) {
     return GenerateDate.generateDateStringDE(year, 12, 25);
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(year, 12, 25);
   }
 };
@@ -446,7 +520,9 @@ Feiertage.getWeihnachtsfeiertag1 = (format, year) => {
 Feiertage.getWeihnachtsfeiertag2 = (format, year) => {
   if (format === formatDE) {
     return GenerateDate.generateDateStringDE(year, 12, 26);
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(year, 12, 26);
   }
 };
@@ -454,7 +530,9 @@ Feiertage.getWeihnachtsfeiertag2 = (format, year) => {
 Feiertage.getSilvester = (format, year) => {
   if (format === formatDE) {
     return GenerateDate.generateDateStringDE(year, 12, 31);
-  } if (format === formatDateObj) {
+  }
+
+  if (format === formatDateObj) {
     return GenerateDate.generateDateObject(year, 12, 31);
   }
 };
