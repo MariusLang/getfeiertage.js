@@ -12,9 +12,6 @@
     },
     "rules": {
         "function-paren-newline": "off",
-        "linebreak-style": [
-            "error",
-            "unix"
-        ]
+        "linebreak-style": 0
     }
 }
